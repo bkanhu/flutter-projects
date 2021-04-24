@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,29 +12,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            crossAxisAlignment:CrossAxisAlignment.stretch,
-            mainAxisAlignment:MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                child: Text("Container 1"),
-                color: Colors.white,
-                padding: EdgeInsets.all(30.0),
-              ),
-
-              Container(
-                child: Text("Container 2"),
-                color: Colors.blueAccent,
-                padding: EdgeInsets.all(30.0),
-              ),
-              Container(
-                child: Text("Container 3"),
-                color: Colors.lightGreenAccent,
-                padding: EdgeInsets.all(30.0),
-              ),
-            ],
+           children: [
+             CircleAvatar(
+               radius: 50.0,
+               backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/40065060?v=4'),
+             ),
+             Text(
+               'B Kanhu Charan',
+               style: TextStyle(
+                 fontFamily: 'Allura',
+               fontSize: 30.0,
+               color: Colors.white,
+               fontWeight: FontWeight.bold,
+             ),
+             ),
+             Text(
+               'FLUTTER DEVELOPER',
+               style: TextStyle(
+                 fontFamily: 'Open Sans',
+                 fontStyle: FontStyle.normal,
+                 fontSize: 15.0,
+                 color: Colors.teal[100],
+                 letterSpacing: 1.05,
+                 fontWeight: FontWeight.bold,
+               ),
+             ),
+           ],
           ),
         ),
       ),
