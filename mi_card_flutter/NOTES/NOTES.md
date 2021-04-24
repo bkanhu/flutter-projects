@@ -123,6 +123,7 @@ class MyApp extends StatelessWidget {
 ````dart
  body: SafeArea(
           child: Column(
+            crossAxisAlignment:CrossAxisAlignment.stretch,
             mainAxisAlignment:MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
