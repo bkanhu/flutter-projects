@@ -117,3 +117,31 @@ class MyApp extends StatelessWidget {
   }
 }
 ````
+
+## Column & Row
+`Column` and `Row` basically same. to use `Row`, just change the `Column` with `Row`
+````dart
+ body: SafeArea(
+          child: Column(
+            mainAxisAlignment:MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                child: Text("Container 1"),
+                color: Colors.white,
+                padding: EdgeInsets.all(30.0),
+              ),
+
+              Container(
+                child: Text("Container 2"),
+                color: Colors.blueAccent,
+                padding: EdgeInsets.all(30.0),
+              ),
+              Container(
+                child: Text("Container 3"),
+                color: Colors.lightGreenAccent,
+                padding: EdgeInsets.all(30.0),
+              ),
+            ],
+          ),
+        ),
+````
